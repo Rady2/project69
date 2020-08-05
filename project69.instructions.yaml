@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+  post_build:
+    commands:
+      - aws cloudformation package
+        --template-file project69code.yaml
+        --s3-bucket ${S3_BUCKET}
+        --output-template-file project69code.yaml
+artifacts:
+  type: zip
+  files:
+    - project69code.yaml
