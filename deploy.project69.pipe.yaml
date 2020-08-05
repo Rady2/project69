@@ -10,10 +10,10 @@ Parameters:
     Default: rpaskalev # variable from portal
   GitHubRepo:
     Type: String
-    Default: project69 # repository with github
+    Default: project69 # repository with githubls
   GitHubToken:
     Type: String
-    Default: 4dd02dc1cba28a0510c431c26721138f29b03988 # github authorization talked
+    Default: 4ebd51bbca9fa37a2b2b73aea2e5b254fcdb94b1 # github authorization talken
 Resources:
   SampleBuildProject:
     Properties:
