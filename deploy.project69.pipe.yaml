@@ -13,7 +13,7 @@ Parameters:
     Default: project69 # repository with githubls
   GitHubToken:
     Type: String
-    Default: 4ebd51bbca9fa37a2b2b73aea2e5b254fcdb94b1 # github authorization talken
+    Default: e5ec1063c0d47a9544d57d1ce9864710b4013d3d # github authorization talken
 Resources:
   SampleBuildProject:
     Properties:
