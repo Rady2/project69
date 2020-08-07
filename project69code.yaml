@@ -86,6 +86,7 @@ Resources:
       KeyName: rady_key
       ImageId: ami-02354e95b39ca8dec
       InstanceType: t2.micro
+      SubnetId: !Ref mySubnets
       SecurityGroupIds:
         - !Ref MySg
       Tags:
