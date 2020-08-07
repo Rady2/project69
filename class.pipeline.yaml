@@ -1,19 +1,19 @@
 Parameters:
   BuildSpecPath:
-    Default: project69.instructions.yaml
+    Default: buildspec.yml
     Type: String
   GitHubBranch:
     Default: master
     Type: String
   GitHubOwner:
     Type: String
-    Default: rpaskalev # variable from portal
+    Default: amitsehgal # change this with your ownername
   GitHubRepo:
     Type: String
-    Default: project69 # repository with githubls
+    Default: deploy-lambda
   GitHubToken:
     Type: String
-    Default: 67e053b68576b7b066409c9b14d86dfa6060b515 # github authorization talken
+    Default: xxxxx # use your auth token
 Resources:
   SampleBuildProject:
     Properties:
@@ -81,7 +81,7 @@ Resources:
                 ChangeSetName: pipeline-devops-function-change-set
                 RoleArn: !ImportValue 'devops-cloudformation-service-role-arn'
                 StackName: pipeline-devops-function
-                TemplatePath: MyBuild::project69.instructions.yaml 
+                TemplatePath: MyBuild::function.yml
               InputArtifacts:
                 - Name: MyBuild
               Name: ChangeSetReplace
