@@ -65,21 +65,21 @@ Resources:
     Properties:
       Domain: vpc
   MySg:
-      Type: AWS::EC2::SecurityGroup
-      Properties:
-        GroupDescription: "Wordpress"
-        GroupName: rady-sg
-        VpcId: !Ref myVPC
-        SecurityGroupEgress:
-          - CidrIp: '0.0.0.0/0'
-            IpProtocol: 'tcp'
-            ToPort: '80'
-            FromPort: '80'
-        SecurityGroupIngress:
-          - CidrIp: '0.0.0.0/0'
-            IpProtocol: 'tcp'
-            ToPort: '80'
-            FromPort: '80'
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Wordpress"
+      GroupName: rady-sg
+      VpcId: !Ref myVPC
+      SecurityGroupEgress:
+        - CidrIp: '0.0.0.0/0'
+          IpProtocol: 'tcp'
+          ToPort: '80'
+          FromPort: '80'
+      SecurityGroupIngress:
+        - CidrIp: '0.0.0.0/0'
+          IpProtocol: 'tcp'
+          ToPort: '80'
+          FromPort: '80'
   myEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
