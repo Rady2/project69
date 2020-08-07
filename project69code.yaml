@@ -86,7 +86,8 @@ Resources:
       KeyName: rady_key
       ImageId: ami-02354e95b39ca8dec
       InstanceType: t2.micro
-      SecurityGroupIds: !Ref MySg
+      SecurityGroupIds:
+        - !Ref MySg
       Tags:
         - Key: name
           Value: pipeline purposes
