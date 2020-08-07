@@ -81,7 +81,7 @@ Resources:
                 ChangeSetName: pipeline-devops-function-change-set
                 RoleArn: !ImportValue 'devops-cloudformation-service-role-arn'
                 StackName: pipeline-devops-function
-                TemplatePath: MyBuild::project69.instructions.yaml 
+                TemplatePath: MyBuild::project69code.yaml
               InputArtifacts:
                 - Name: MyBuild
               Name: ChangeSetReplace
