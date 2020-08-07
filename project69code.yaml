@@ -72,14 +72,14 @@ Resources:
       VpcId: !Ref myVPC
       SecurityGroupEgress:
         - CidrIp: '0.0.0.0/0'
-          IpProtocol: 'tcp'
-          ToPort: '80'
-          FromPort: '80'
+          IpProtocol: 'tcp,ssh'
+          ToPort: '80,22'
+          FromPort: '80,22'
       SecurityGroupIngress:
         - CidrIp: '0.0.0.0/0'
-          IpProtocol: 'tcp'
-          ToPort: '80'
-          FromPort: '80'
+          IpProtocol: 'tcp,ssh'
+          ToPort: '80,22'
+          FromPort: '80,22'
   myEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
